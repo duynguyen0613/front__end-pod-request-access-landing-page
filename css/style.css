@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Chivo google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&family=Overpass:wght@300;600&display=swap');
+
+/*  */
+
+:root {
+    --c-accent: #54e6af;
+    --c-bg-main: #121725;
+    --c-bg-form: #2c344b;
+    --c-text: #c2cbe5;
+    --c-light: #fff;
+    --c-dark: #333;
+    --ff-primary: "Chivo", sans-serif;
+    --fw-1: 300;
+    --fw-2: 400;
+    --fw-3: 700;
+    --fw-4: 900;
+}
+
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: var(--c-bg-main);
+    font-family: var(--ff-primary);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1.8rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.services img {
+    width: 4rem;
+    filter: invert(39%) sepia(16%) saturate(828%) hue-rotate(187deg) brightness(98%) contrast(94%);
+}
+
+.contact__form {
+    margin-top: 4rem;
+}
+
+.contact__form .group-control {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.contact__form .group-control input {
+    width: 100%;
+    padding: .8rem 1rem;
+    border-radius: 1000px;
+    border: none;
+    font-weight: var(--fw-2);
+    font-size: 1.2rem;
+}
+
+.contact__form .group-control input[type='email'] {
+    background-color: var(--c-bg-form);
+    color: var(--c-text);
+}
+
+.contact__form .group-control input[type='submit'] {
+    background-color: var(--c-accent);
+    color: var(--c-light);
+}
+
+.art--1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+
+/* ultility classes */
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.my-3 {
+    margin: 3rem 0;
+}
+
+
+/*  */
+
+.mx-1 {
+    margin: 0 1rem;
+}
+
+.mx-2 {
+    margin: 0 2rem;
+}
+
+.mx-3 {
+    margin: 0 3rem;
+}
+
+
+/*  */
+
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
+
+/*  */
+
+.px-1 {
+    padding: 0 1rem;
+}
+
+.px-2 {
+    padding: 0 2rem;
+}
+
+.px-3 {
+    padding: 0 3rem;
+}
+
+
+/*  */
+
+.text--title {
+    font-size: 1.3rem;
+}
+
+.text--body {
+    font-size: 1rem;
+}
+
+.text--uppercase {
+    text-transform: capitalize;
+}
+
+.text-color--accent {
+    color: var(--c-accent);
+}
+
+.text--center {
+    text-align: center;
+}
+
+.text-color--white {
+    color: #fff;
+}
+
+.text-color--body {
+    color: var(--c-text);
+}
+
+
+/* tablet view */
+
+@media (min-width: 1023px) {
+    .hero {
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 95vw;
+        padding: 4rem 0;
+    }
+    .hero__img-box,
+    .hero__content {
+        background: var(--c-bg-main);
+        padding-left: 2rem;
+    }
+    .hero__img-box {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100%;
+        padding-top: 5rem;
+        margin: 0;
+        min-width: 30vw;
+        background: red;
+    }
+    .hero__img-box img {}
+    .hero__content {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 5rem;
+        margin: 0;
+    }
+    .services {
+        order: 4;
+        margin: 1rem 0;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .services img {}
+    .contact__form {
+        order: 3;
+        margin: 1rem 0;
+        width: 60%;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .contact__form input[type="email"] {
+        min-height: 60px;
+    }
+    .contact__form .group-control--inline {
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        width: 30%;
+        transform: translateY(-85%);
+    }
+    .art--1 {
+        background-image: url("../images/tablet/image-host.jpg");
+        background-position: top;
+        width: 70%;
+        height: 80%;
+        right: 0;
+        left: unset;
+        z-index: -1;
+    }
+    .art--2 {
+        order: 5;
+        background-image: url("../images/desktop/bg-pattern-dots.svg");
+        background-position: top left;
+        background-repeat: no-repeat;
+        margin-top: 5rem;
+        min-width: 20vw;
+        height: 200px;
+    }
+    /* ultility classes for tablet media */
+    .text--center {
+        text-align: unset;
+    }
+    .text--title {
+        font-size: 4.2rem;
+    }
+    .text--body {
+        font-size: 1.8rem;
+    }
+}
